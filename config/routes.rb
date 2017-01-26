@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
-  
-  resources :products
+  get "/products", to: 'products#index'
 
-  root 'products#index'
+  get "/products/new", to: 'products#new'
+  get "/products/about_us", to: 'products#about_us'
+
+  get "/products/:id", to: 'products#show'
+
+  post "/products", to:'products#create'
+
+  get "/products/:id/edit", to: 'products#edit'
+
+  patch "/products/:id", to:'products#update'
+
+  delete "/products/:id", to: 'products#destroy'  
 end

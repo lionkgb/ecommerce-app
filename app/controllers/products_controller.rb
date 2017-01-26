@@ -24,6 +24,8 @@ class ProductsController < ApplicationController
   def edit 
     @product = Product.find_by(id: params[:id])
   end 
+  def about_us
+  end
   def update 
     product = Product.find_by(id: params[:id])
     product.assign_attributes({

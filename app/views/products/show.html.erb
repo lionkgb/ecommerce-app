@@ -1,26 +1,23 @@
-<h1> WatchOnShp</h1>
+
 <div class="btn-group">
   <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    More options<span class="caret"></span>
+    Change<span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
     <li>
-      <%= link_to 'Delete', products_path(@product), method: :delete, data: { confirm: 'Are you sure you want ot delete this item?' } %>
+      <%= link_to 'Delete', "/products#{@product.id}", method: :delete %>
     </li>
     <li>
-      <%= link_to 'Edit', edit_product_path %>
-    </li>
-    <li>
-      <%= link_to 'All products', root_path %>
+      <%= link_to 'Edit', "/products/#{@product.id}/edit" %>
     </li>
   </ul>
 </div>
-<h3>Brand:<%= @product.brand%></h3>
-<h3>Gender:<%= @product.gender%></h3>
-<h3>Color:<%= @product.color%><h3>
-<h3>Style:<%= @product.style%></h3>
-<h3>Movement:<%= @product.movement%></h3>
-<h3>Features:<%= @product.features%></h3>
-<h3>Price:<%= @product.price%></h3>
-<h3>Tax payment:<%= @product.tax%></h3>
+<h3>Brand: <%= @product.brand%></h3>
+<h3>Gender: <%= @product.gender%></h3>
+<h3>Color: <%= @product.color%><h3>
+<h3>Style: <%= @product.style%></h3>
+<h3>Movement: <%= @product.movement%></h3>
+<h3>Features: <%= @product.features%></h3>
+<h3>Price: $<%= @product.price%></h3>
+<h3>Tax rate payment: $<%= @product.tax%></h3>
 <h3><img src="<%= @product.image %>"></h3>

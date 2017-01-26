@@ -1,0 +1,20 @@
+
+<div class="row">
+  <% @products.each_slice(3) do |three_products| %>
+    <div class="row">
+        <% three_products.each do |product| %>
+          <div class="col-md-4">
+            <h2><%= link_to product.brand, "/products/#{product.id}" %></h2>
+            <img src="<%= product.image %>" class="img-responsive">
+            <h2>Gender: <%= product.gender%></h2>
+            <h2>Color: <%= product.color %></h2>
+            <h2>Style: <%= product.style %></h2>
+            <h2>Movement: <%= product.movement%></h2>
+            <h2>Features: <%= product.features %></h2>
+            <h2>Price: <%= product.price %></h2>
+          </div>
+        <% end %>
+    </div>
+  <% end %>
+</div>
+<button class="btn btn-info"><a href="/products/new">Create new product</a></button>

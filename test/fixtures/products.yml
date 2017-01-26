@@ -8,6 +8,7 @@ one:
   movement: MyString
   features: MyString
   price: MyString
+  image: MyString
 
 two:
   brand: MyString
@@ -17,3 +18,4 @@ two:
   movement: MyString
   features: MyString
   price: MyString
+  image: MyString

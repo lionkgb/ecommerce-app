@@ -1,0 +1,31 @@
+<h1>WatchOnShp</h1>
+ 
+ <%= form_tag "/products/#{@product.id}", method: :patch do %>
+   <div>
+     Brand: <input type="text" name="brand" value="<%= @product.brand %>">
+   </div>
+   <div>
+     Gender: <input type="text" name="gender" value="<%= @product.gender %>">
+   </div>
+   <div>
+     Color: <input type="text" name="color" value="<%= @product.color %>">
+   </div>
+   <div>
+     Style: <input type="text" name="style" value="<%= @product.style %>">
+   </div>
+   <div>
+     Movement: <input type="text" name="movement" value="<%= @product.movement %>">
+   </div>
+   <div>
+     Features: <input type="text" name="features" value="<%= @product.features %>">
+   </div>
+   <div>
+     Price: <input type="text" name="price" value="<%= @product.price %>">
+   </div>
+   <div>
+     Image: <input type="text" name="image" value="<%= @product.image %>">
+   </div>
+   <div>
+     <input type="submit" value="Edit parameters">
+   </div>
+ <% end %> 

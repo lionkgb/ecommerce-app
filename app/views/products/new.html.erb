@@ -1,0 +1,31 @@
+<h1>New product</h1>
+
+<%= form_tag "/products", method: :post do %>
+  <div>
+   Brand: <input type="text" name="brand">
+  </div>
+  <div>
+   Gender: <input type="text" name="gender"> 
+  </div>
+  <div>
+   Color: <input type="text" name="color">
+  </div>
+  <div>
+   Style: <input type="text" name="style">
+  </div>
+  <div>
+   Movement: <input type="text" name="movement">
+  </div>
+  <div>
+   Features: <input type="text" name="features">
+  </div>
+  <div>
+   Price: <input type="text" name="price">
+  </div>
+  <div>
+   Image: <input type="text" name="image">
+  </div>
+  <div>
+   <input type="submit" name="Create">
+  </div>
+<% end %> 

@@ -1,7 +1,16 @@
 class ProductsController < ApplicationController
   def index 
-    @products = Product.all
+    if params[:price]
+      @products = Product.all.order(price: params[:price])
+
+    elsif params[:filter] == "discount"
+      @products = Product.where("price < ?", 200)
+
+    else
+      @products = Product.all
+    end
   end 
+  
   def show 
     @product = Product.find_by(id: params[:id])
   end 
